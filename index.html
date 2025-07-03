@@ -3,12 +3,1026 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Hello world project</title>
+    <title>VPS Virtual Server Hosting in Hong Kong - ARZ Host</title>
+    <meta
+      name="description"
+      content="Professional VPS hosting in Hong Kong. Super-fast, ultra-secure, Asia-optimized virtual servers with unbeatable performance and low latency."
+    />
+    <meta
+      name="keywords"
+      content="vps hosting hong kong, hong kong vps, asia vps, china vps hosting, virtual server hosting"
+    />
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      :root {
+        --background: #fafafa;
+        --primary: #00adb5;
+        --secondary: #eeeeee;
+        --accent: #393e46;
+        --text: #222831;
+      }
+
+      body {
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+        line-height: 1.6;
+        color: var(--text);
+        background-color: var(--background);
+      }
+
+      .container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 20px;
+      }
+
+      /* Header */
+      header {
+        background: white;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        position: sticky;
+        top: 0;
+        z-index: 100;
+      }
+
+      nav {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 1rem 0;
+      }
+
+      .logo {
+        font-size: 1.8rem;
+        font-weight: bold;
+        color: var(--primary);
+        text-decoration: none;
+      }
+
+      .nav-links {
+        display: flex;
+        list-style: none;
+        gap: 2rem;
+        align-items: center;
+      }
+
+      .nav-links a {
+        text-decoration: none;
+        color: var(--text);
+        font-weight: 500;
+        transition: color 0.3s;
+      }
+
+      .nav-links a:hover {
+        color: var(--primary);
+      }
+
+      .cta-btn {
+        background: var(--primary);
+        color: white;
+        padding: 0.75rem 1.5rem;
+        border-radius: 5px;
+        text-decoration: none;
+        font-weight: 600;
+        transition: background 0.3s;
+      }
+
+      .cta-btn:hover {
+        background: #008a91;
+      }
+
+      /* Mobile Menu */
+      .mobile-menu {
+        display: none;
+        cursor: pointer;
+        flex-direction: column;
+        gap: 3px;
+      }
+
+      .mobile-menu span {
+        width: 25px;
+        height: 3px;
+        background: var(--text);
+        transition: 0.3s;
+      }
+
+      /* Hero Section */
+      .hero {
+        text-align: center;
+        padding: 5rem 0;
+      }
+
+      .hero h1 {
+        font-size: 3.5rem;
+        font-weight: bold;
+        color: var(--text);
+        margin-bottom: 1rem;
+        line-height: 1.2;
+      }
+
+      .hero .subtitle {
+        font-size: 1.8rem;
+        color: var(--primary);
+        font-weight: 600;
+        margin-bottom: 1rem;
+      }
+
+      .hero p {
+        font-size: 1.2rem;
+        color: var(--text);
+        margin-bottom: 2rem;
+        max-width: 800px;
+        margin-left: auto;
+        margin-right: auto;
+      }
+
+      .hero-btn {
+        background: var(--primary);
+        color: white;
+        padding: 1rem 2rem;
+        border-radius: 8px;
+        text-decoration: none;
+        font-size: 1.1rem;
+        font-weight: 600;
+        transition: background 0.3s;
+        display: inline-block;
+      }
+
+      .hero-btn:hover {
+        background: #008a91;
+      }
+
+      /* Section Styles */
+      .section {
+        padding: 4rem 0;
+      }
+
+      .section-white {
+        background: white;
+      }
+
+      .section h2 {
+        font-size: 2.5rem;
+        font-weight: bold;
+        color: var(--text);
+        text-align: center;
+        margin-bottom: 3rem;
+      }
+
+      .section p {
+        font-size: 1.1rem;
+        color: var(--text);
+        margin-bottom: 2rem;
+      }
+
+      /* Why Choose Section */
+      .benefits-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 2rem;
+        margin-top: 2rem;
+      }
+
+      .benefit-item {
+        text-align: center;
+        padding: 2rem;
+      }
+
+      .benefit-icon {
+        width: 60px;
+        height: 60px;
+        background: var(--secondary);
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 2rem;
+        margin: 0 auto 1rem;
+      }
+
+      .benefit-item h3 {
+        font-weight: 600;
+        color: var(--text);
+        margin-bottom: 0.5rem;
+      }
+
+      .benefit-item p {
+        color: var(--accent);
+        margin: 0;
+      }
+
+      /* Features Grid */
+      .features-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+        gap: 2rem;
+        margin-top: 2rem;
+      }
+
+      .feature-card {
+        background: white;
+        padding: 2rem;
+        border-radius: 10px;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        border: 1px solid var(--secondary);
+      }
+
+      .feature-icon {
+        font-size: 2.5rem;
+        margin-bottom: 1rem;
+      }
+
+      .feature-card h3 {
+        font-weight: 600;
+        color: var(--text);
+        margin-bottom: 0.5rem;
+      }
+
+      .feature-card p {
+        color: var(--accent);
+        margin: 0;
+      }
+
+      /* Pricing Table */
+      .pricing-table {
+        background: white;
+        border-radius: 10px;
+        overflow: hidden;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        margin: 2rem 0;
+      }
+
+      .pricing-table table {
+        width: 100%;
+        border-collapse: collapse;
+      }
+
+      .pricing-table th {
+        background: var(--secondary);
+        padding: 1rem;
+        text-align: left;
+        font-weight: 600;
+        color: var(--text);
+        border-bottom: 1px solid #ddd;
+      }
+
+      .pricing-table td {
+        padding: 1rem;
+        border-bottom: 1px solid #ddd;
+      }
+
+      .pricing-table tr:nth-child(even) {
+        background: #f9f9f9;
+      }
+
+      .plan-name {
+        font-weight: 600;
+        color: var(--primary);
+      }
+
+      .price {
+        font-weight: 600;
+        color: var(--primary);
+        font-size: 1.1rem;
+      }
+
+      /* Add-ons */
+      .addons-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 1rem;
+        margin: 2rem 0;
+      }
+
+      .addon-item {
+        background: var(--background);
+        padding: 1rem;
+        border-radius: 8px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+
+      .addon-price {
+        font-weight: 600;
+        color: var(--primary);
+      }
+
+      /* Perfect For Section */
+      .perfect-for-list {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+        gap: 1rem;
+        margin: 2rem 0;
+      }
+
+      .perfect-for-item {
+        display: flex;
+        align-items: flex-start;
+        gap: 1rem;
+      }
+
+      .checkmark {
+        color: var(--primary);
+        font-size: 1.5rem;
+        margin-top: 0.2rem;
+      }
+
+      /* Testimonials */
+      .testimonials-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+        gap: 2rem;
+        margin-top: 2rem;
+      }
+
+      .testimonial {
+        background: var(--background);
+        padding: 2rem;
+        border-radius: 10px;
+        border: 1px solid var(--secondary);
+      }
+
+      .testimonial p {
+        font-style: italic;
+        margin-bottom: 1rem;
+        color: var(--text);
+      }
+
+      .testimonial-author {
+        font-weight: 600;
+        color: var(--primary);
+      }
+
+      /* Infrastructure */
+      .infrastructure-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 2rem;
+        margin-top: 2rem;
+      }
+
+      .infrastructure-item {
+        background: white;
+        padding: 2rem;
+        border-radius: 10px;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        text-align: center;
+        border: 1px solid var(--secondary);
+      }
+
+      /* Management Features */
+      .management-list {
+        list-style: none;
+        margin: 2rem 0;
+      }
+
+      .management-list li {
+        display: flex;
+        align-items: flex-start;
+        gap: 1rem;
+        margin-bottom: 1rem;
+        font-size: 1.1rem;
+      }
+
+      /* FAQ */
+      .faq-container {
+        max-width: 800px;
+        margin: 0 auto;
+      }
+
+      .faq-item {
+        border-bottom: 1px solid var(--secondary);
+        padding: 1.5rem 0;
+      }
+
+      .faq-question {
+        font-weight: 600;
+        color: var(--text);
+        font-size: 1.1rem;
+        margin-bottom: 0.5rem;
+      }
+
+      .faq-answer {
+        color: var(--accent);
+        margin: 0;
+      }
+
+      /* Footer */
+      footer {
+        background: var(--accent);
+        color: white;
+        padding: 3rem 0 1rem;
+      }
+
+      .footer-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 2rem;
+        margin-bottom: 2rem;
+      }
+
+      .footer-section h3 {
+        color: white;
+        margin-bottom: 1rem;
+      }
+
+      .footer-section ul {
+        list-style: none;
+      }
+
+      .footer-section ul li {
+        margin-bottom: 0.5rem;
+      }
+
+      .footer-section ul li a {
+        color: #ccc;
+        text-decoration: none;
+        transition: color 0.3s;
+      }
+
+      .footer-section ul li a:hover {
+        color: var(--primary);
+      }
+
+      .footer-bottom {
+        text-align: center;
+        padding-top: 2rem;
+        border-top: 1px solid #555;
+        color: #ccc;
+      }
+
+      /* Responsive Design */
+      @media (max-width: 768px) {
+        .nav-links {
+          display: none;
+        }
+
+        .mobile-menu {
+          display: flex;
+        }
+
+        .hero h1 {
+          font-size: 2.5rem;
+        }
+
+        .hero .subtitle {
+          font-size: 1.4rem;
+        }
+
+        .section h2 {
+          font-size: 2rem;
+        }
+
+        .benefits-grid,
+        .features-grid {
+          grid-template-columns: 1fr;
+        }
+
+        .pricing-table {
+          overflow-x: auto;
+        }
+      }
+
+      @media (max-width: 480px) {
+        .container {
+          padding: 0 15px;
+        }
+
+        .hero {
+          padding: 3rem 0;
+        }
+
+        .hero h1 {
+          font-size: 2rem;
+        }
+
+        .hero .subtitle {
+          font-size: 1.2rem;
+        }
+      }
+    </style>
   </head>
-
   <body>
-    <div id="root"></div>
+    <!-- Header -->
+    <header>
+      <div class="container">
+        <nav>
+          <a href="#" class="logo">ARZ Host</a>
+          <ul class="nav-links">
+            <li>
+              <a
+                href="https://arzhost.com/hosting/china-based-vps-server-hosting/"
+                >VPS Hosting Hong Kong</a
+              >
+            </li>
+            <li>
+              <a href="https://arzhost.com/region-based-vps/">VPS Region</a>
+            </li>
+            <li>
+              <a href="https://arzhost.com/lifetime-web-hosting/"
+                >Lifetime Web Hosting</a
+              >
+            </li>
+            <li><a href="https://www.arzhost.com/about-us/">About Us</a></li>
+            <li>
+              <a href="https://www.arzhost.com/contact-us/">Contact Us</a>
+            </li>
+            <li>
+              <a href="https://arzhost.com/vps/" class="cta-btn">Get Started</a>
+            </li>
+          </ul>
+          <div class="mobile-menu" onclick="toggleMobileMenu()">
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+        </nav>
+      </div>
+    </header>
 
-    <script type="module" src="/client/App.tsx"></script>
+    <!-- Hero Section -->
+    <section class="hero">
+      <div class="container">
+        <h1>VPS Virtual Server Hosting in Hong Kong</h1>
+        <p class="subtitle">Super-Fast. Ultra-Secure. Asia-Optimized.</p>
+        <p>
+          Launch your powerful VPS in Hong Kong and enjoy unbeatable
+          performance, low latency, and full control right where your customers
+          are.
+        </p>
+        <a href="https://arzhost.com/vps/" class="hero-btn"
+          >Get Started in Minutes →</a
+        >
+      </div>
+    </section>
+
+    <!-- Why Choose Section -->
+    <section class="section section-white">
+      <div class="container">
+        <h2>Why Choose VPS Hosting in Hong Kong?</h2>
+        <p style="text-align: center; max-width: 800px; margin: 0 auto">
+          If your audience is in Asia or Mainland China, hosting closer means
+          speedier sites, smoother apps, and happier users. Hong Kong is a
+          digital hub with:
+        </p>
+        <div class="benefits-grid">
+          <div class="benefit-item">
+            <div class="benefit-icon">⚡</div>
+            <h3>Lightning-fast connectivity</h3>
+            <p>to Asia-Pacific and China</p>
+          </div>
+          <div class="benefit-item">
+            <div class="benefit-icon">🏢</div>
+            <h3>World-class infrastructure</h3>
+            <p>and stable internet laws</p>
+          </div>
+          <div class="benefit-item">
+            <div class="benefit-icon">🎯</div>
+            <h3>Strategic edge</h3>
+            <p>for eCommerce, SaaS, and developers targeting Asia</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="section">
+      <div class="container">
+        <h2>VPS Features You'll Absolutely Love</h2>
+        <p style="text-align: center">
+          You deserve hosting that works as hard as you do! Our Hong Kong VPS
+          gives you:
+        </p>
+        <div class="features-grid">
+          <div class="feature-card">
+            <div class="feature-icon">💾</div>
+            <h3>NVMe SSD Storage</h3>
+            <p>blazing-fast speed for your websites</p>
+          </div>
+          <div class="feature-card">
+            <div class="feature-icon">🔑</div>
+            <h3>Full Root Access</h3>
+            <p>total control over software & OS</p>
+          </div>
+          <div class="feature-card">
+            <div class="feature-icon">📈</div>
+            <h3>Scalable CPU & RAM</h3>
+            <p>upgrade when you grow</p>
+          </div>
+          <div class="feature-card">
+            <div class="feature-icon">🛡️</div>
+            <h3>Free DDoS Protection</h3>
+            <p>stay safe from cyber bullies</p>
+          </div>
+          <div class="feature-card">
+            <div class="feature-icon">🌐</div>
+            <h3>Dedicated IPv4 Address</h3>
+            <p>private and stable connections</p>
+          </div>
+          <div class="feature-card">
+            <div class="feature-icon">🏢</div>
+            <h3>Secure Hong Kong Data Center</h3>
+            <p>99.99% Uptime Guarantee</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Pricing Section -->
+    <section class="section section-white">
+      <div class="container">
+        <h2>VPS Hosting Plans & Pricing</h2>
+        <p style="text-align: center">
+          All plans include full root access, fast NVMe storage, and 24/7
+          support.
+        </p>
+
+        <div class="pricing-table">
+          <table>
+            <thead>
+              <tr>
+                <th>Plan</th>
+                <th>CPU Cores</th>
+                <th>RAM</th>
+                <th>Storage</th>
+                <th>Bandwidth</th>
+                <th>Price (Monthly)</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td class="plan-name">Starter</td>
+                <td>1 Core</td>
+                <td>1 GB</td>
+                <td>25 GB</td>
+                <td>1 TB</td>
+                <td class="price">$8.99/mo</td>
+              </tr>
+              <tr>
+                <td class="plan-name">Developer</td>
+                <td>2 Cores</td>
+                <td>2 GB</td>
+                <td>50 GB</td>
+                <td>2 TB</td>
+                <td class="price">$14.99/mo</td>
+              </tr>
+              <tr>
+                <td class="plan-name">Pro</td>
+                <td>4 Cores</td>
+                <td>4 GB</td>
+                <td>100 GB</td>
+                <td>4 TB</td>
+                <td class="price">$24.99/mo</td>
+              </tr>
+              <tr>
+                <td class="plan-name">Elite</td>
+                <td>6 Cores</td>
+                <td>8 GB</td>
+                <td>200 GB</td>
+                <td>6 TB</td>
+                <td class="price">$44.99/mo</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <h3 style="color: var(--text); margin-bottom: 1rem">
+          Optional Add-Ons:
+        </h3>
+        <div class="addons-grid">
+          <div class="addon-item">
+            <span>cPanel License:</span>
+            <span class="addon-price">+$14/mo</span>
+          </div>
+          <div class="addon-item">
+            <span>Daily Backups:</span>
+            <span class="addon-price">+$5/mo</span>
+          </div>
+          <div class="addon-item">
+            <span>Extra IPv4:</span>
+            <span class="addon-price">+$3/mo</span>
+          </div>
+          <div class="addon-item">
+            <span>Managed Support:</span>
+            <span class="addon-price">+$20/mo</span>
+          </div>
+        </div>
+
+        <p
+          style="
+            text-align: center;
+            color: var(--primary);
+            font-weight: 600;
+            font-size: 1.1rem;
+            margin: 2rem 0;
+          "
+        >
+          Save 15% on annual billing.
+        </p>
+        <div style="text-align: center">
+          <a href="https://arzhost.com/vps/" class="hero-btn"
+            >Choose Your Plan Now</a
+          >
+        </div>
+      </div>
+    </section>
+
+    <!-- Perfect For Section -->
+    <section class="section">
+      <div class="container">
+        <h2>Perfect For...</h2>
+        <p>Your Hong Kong VPS is ideal for:</p>
+        <div class="perfect-for-list">
+          <div class="perfect-for-item">
+            <span class="checkmark">✓</span>
+            <span>Hosting websites and apps for Asian users</span>
+          </div>
+          <div class="perfect-for-item">
+            <span class="checkmark">✓</span>
+            <span>Cross-border eCommerce and Shopify stores</span>
+          </div>
+          <div class="perfect-for-item">
+            <span class="checkmark">✓</span>
+            <span>VPN and proxy services near China</span>
+          </div>
+          <div class="perfect-for-item">
+            <span class="checkmark">✓</span>
+            <span>API, bots, and development environments</span>
+          </div>
+          <div class="perfect-for-item">
+            <span class="checkmark">✓</span>
+            <span>Startup founders and digital agencies</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="section section-white">
+      <div class="container">
+        <h2>What Our Clients Say</h2>
+        <div class="testimonials-grid">
+          <div class="testimonial">
+            <p>
+              "I host all my crypto bots on their Hong Kong VPS. Fast setup, no
+              lag. Totally recommend!"
+            </p>
+            <div class="testimonial-author">– Leo T., Singapore</div>
+          </div>
+          <div class="testimonial">
+            <p>
+              "Perfect for my Shopify store targeting customers in China and
+              Taiwan. Love the support too!"
+            </p>
+            <div class="testimonial-author">– Jenny W., eCommerce Seller</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Infrastructure Section -->
+    <section class="section">
+      <div class="container">
+        <h2>Rock-Solid Infrastructure</h2>
+        <p style="text-align: center">
+          Your VPS lives in a secure Tier III data center in Hong Kong with:
+        </p>
+        <div class="infrastructure-grid">
+          <div class="infrastructure-item">
+            <p>Redundant power and network</p>
+          </div>
+          <div class="infrastructure-item">
+            <p>Advanced firewalls and uptime monitoring</p>
+          </div>
+          <div class="infrastructure-item">
+            <p>24/7 on-site technicians and DDoS protection</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Management Section -->
+    <section class="section section-white">
+      <div class="container">
+        <h2>Simple Setup. Easy Management.</h2>
+        <p style="text-align: center">No tech headaches here. You'll enjoy:</p>
+        <ul class="management-list">
+          <li>
+            <span class="checkmark">✓</span>
+            <span>One-click OS installs: Ubuntu, CentOS, Debian & more</span>
+          </li>
+          <li>
+            <span class="checkmark">✓</span>
+            <span>Reboot, reimage, and scale right from your dashboard</span>
+          </li>
+          <li>
+            <span class="checkmark">✓</span>
+            <span>Real human support anytime, any day</span>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="section">
+      <div class="container">
+        <h2>FAQ</h2>
+        <div class="faq-container">
+          <div class="faq-item">
+            <div class="faq-question">
+              Q: Can I target users in Mainland China with this VPS?
+            </div>
+            <p class="faq-answer">
+              A: Yes! Hong Kong's low latency makes it ideal for China-focused
+              sites.
+            </p>
+          </div>
+          <div class="faq-item">
+            <div class="faq-question">Q: Is it unmanaged or managed VPS?</div>
+            <p class="faq-answer">
+              A: All plans are unmanaged by default. Managed support is
+              available as an add-on.
+            </p>
+          </div>
+          <div class="faq-item">
+            <div class="faq-question">Q: Can I upgrade my VPS later?</div>
+            <p class="faq-answer">
+              A: Absolutely! You can scale RAM, storage, or CPU whenever you
+              need.
+            </p>
+          </div>
+          <div class="faq-item">
+            <div class="faq-question">Q: How fast is the setup?</div>
+            <p class="faq-answer">
+              A: Instant provisioning – your VPS is ready in minutes!
+            </p>
+          </div>
+          <div class="faq-item">
+            <div class="faq-question">
+              Q: What payment methods do you accept?
+            </div>
+            <p class="faq-answer">
+              A: We accept Visa, Mastercard, PayPal, and crypto (BTC/ETH/USDT).
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="section section-white" style="text-align: center">
+      <div class="container">
+        <h2>Ready to Elevate Your Hosting Game?</h2>
+        <p style="font-size: 1.2rem; margin-bottom: 2rem">
+          Start your
+          <a
+            href="https://arzhost.com/hosting/china-based-vps-server-hosting/"
+            style="color: var(--primary); text-decoration: none"
+            >VPS hosting Hong Kong</a
+          >
+          today and experience premium performance across Asia!
+        </p>
+        <a href="https://arzhost.com/vps/" class="hero-btn"
+          >Choose Your Plan Now →</a
+        >
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+      <div class="container">
+        <div class="footer-grid">
+          <div class="footer-section">
+            <h3>ARZ Host</h3>
+            <p style="color: #ccc; margin-bottom: 1rem">
+              Professional VPS hosting solutions for Asia-Pacific region with
+              unbeatable performance and reliability.
+            </p>
+            <p style="color: #ccc">
+              Website:
+              <a href="https://arzhost.com" style="color: var(--primary)"
+                >arzhost.com</a
+              >
+            </p>
+            <p style="color: #ccc">Phone: +1 (631) 594-8060</p>
+          </div>
+
+          <div class="footer-section">
+            <h3>Services</h3>
+            <ul>
+              <li>
+                <a
+                  href="https://arzhost.com/hosting/china-based-vps-server-hosting/"
+                  >VPS Hosting Hong Kong</a
+                >
+              </li>
+              <li>
+                <a href="https://arzhost.com/region-based-vps/">VPS Region</a>
+              </li>
+              <li>
+                <a href="https://arzhost.com/lifetime-web-hosting/"
+                  >Lifetime Web Hosting</a
+                >
+              </li>
+              <li><a href="https://arzhost.com">Our Hosting Services</a></li>
+            </ul>
+          </div>
+
+          <div class="footer-section">
+            <h3>Company</h3>
+            <ul>
+              <li><a href="https://www.arzhost.com/about-us/">About Us</a></li>
+              <li>
+                <a href="https://www.arzhost.com/contact-us/">Contact Us</a>
+              </li>
+              <li>
+                <a href="https://www.arzhost.com/terms-conditions/"
+                  >Terms and Conditions</a
+                >
+              </li>
+              <li>
+                <a href="https://www.arzhost.com/privacy-policy/"
+                  >Privacy Policy</a
+                >
+              </li>
+              <li>
+                <a href="https://www.arzhost.com/disclaimer/">Disclaimer</a>
+              </li>
+            </ul>
+          </div>
+
+          <div class="footer-section">
+            <h3>Quick Actions</h3>
+            <a href="https://arzhost.com/vps/" class="cta-btn"
+              >Choose Your Plan</a
+            >
+          </div>
+        </div>
+
+        <div class="footer-bottom">
+          <p>
+            &copy; <span id="current-year"></span> ARZ Host. All rights
+            reserved.
+          </p>
+        </div>
+      </div>
+    </footer>
+
+    <script>
+      // Set current year in footer
+      document.getElementById("current-year").textContent =
+        new Date().getFullYear();
+
+      // Mobile menu toggle (basic functionality)
+      function toggleMobileMenu() {
+        const navLinks = document.querySelector(".nav-links");
+        navLinks.style.display =
+          navLinks.style.display === "flex" ? "none" : "flex";
+      }
+
+      // Smooth scrolling for anchor links
+      document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+        anchor.addEventListener("click", function (e) {
+          e.preventDefault();
+          const target = document.querySelector(this.getAttribute("href"));
+          if (target) {
+            target.scrollIntoView({
+              behavior: "smooth",
+              block: "start",
+            });
+          }
+        });
+      });
+
+      // Add scroll effect to header
+      window.addEventListener("scroll", function () {
+        const header = document.querySelector("header");
+        if (window.scrollY > 100) {
+          header.style.backgroundColor = "rgba(255, 255, 255, 0.95)";
+          header.style.backdropFilter = "blur(10px)";
+        } else {
+          header.style.backgroundColor = "white";
+          header.style.backdropFilter = "none";
+        }
+      });
+
+      // Add loading animation to CTA buttons
+      document.querySelectorAll(".cta-btn, .hero-btn").forEach((btn) => {
+        btn.addEventListener("click", function (e) {
+          if (this.href.includes("arzhost.com")) {
+            const originalText = this.textContent;
+            this.textContent = "Loading...";
+            setTimeout(() => {
+              this.textContent = originalText;
+            }, 2000);
+          }
+        });
+      });
+    </script>
   </body>
 </html>
