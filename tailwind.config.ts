@@ -14,6 +14,13 @@ export default {
     },
     extend: {
       colors: {
+        // Ocean Breeze theme
+        "ocean-background": "#E9FFF9",
+        "ocean-primary": "#10A37F",
+        "ocean-secondary": "#99F3BD",
+        "ocean-accent": "#30E3CA",
+        "ocean-text": "#10375C",
+
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
         ring: "hsl(var(--ring))",

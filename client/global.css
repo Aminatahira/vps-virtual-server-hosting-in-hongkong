@@ -9,33 +9,34 @@
    * A different format will require also updating the theme in tailwind.config.ts.
   */
   :root {
-    --background: 0 0% 100%;
-    --foreground: 222.2 84% 4.9%;
+    /* Ocean Breeze theme */
+    --background: 154 100% 97%; /* #E9FFF9 */
+    --foreground: 197 70% 19%; /* #10375C */
 
-    --card: 0 0% 100%;
-    --card-foreground: 222.2 84% 4.9%;
+    --card: 154 100% 97%;
+    --card-foreground: 197 70% 19%;
 
-    --popover: 0 0% 100%;
-    --popover-foreground: 222.2 84% 4.9%;
+    --popover: 154 100% 97%;
+    --popover-foreground: 197 70% 19%;
 
-    --primary: 222.2 47.4% 11.2%;
-    --primary-foreground: 210 40% 98%;
+    --primary: 158 74% 34%; /* #10A37F */
+    --primary-foreground: 154 100% 97%;
 
-    --secondary: 210 40% 96.1%;
-    --secondary-foreground: 222.2 47.4% 11.2%;
+    --secondary: 140 89% 80%; /* #99F3BD */
+    --secondary-foreground: 197 70% 19%;
 
-    --muted: 210 40% 96.1%;
-    --muted-foreground: 215.4 16.3% 46.9%;
+    --muted: 140 89% 80%;
+    --muted-foreground: 197 50% 35%;
 
-    --accent: 210 40% 96.1%;
-    --accent-foreground: 222.2 47.4% 11.2%;
+    --accent: 173 74% 55%; /* #30E3CA */
+    --accent-foreground: 197 70% 19%;
 
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 210 40% 98%;
 
-    --border: 214.3 31.8% 91.4%;
-    --input: 214.3 31.8% 91.4%;
-    --ring: 222.2 84% 4.9%;
+    --border: 154 60% 90%;
+    --input: 154 60% 90%;
+    --ring: 158 74% 34%;
 
     --radius: 0.5rem;
 
